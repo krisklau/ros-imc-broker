@@ -1,26 +1,25 @@
-//*************************************************************************
-// Copyright (C) 2016 OceanScan - Marine Systems & Technology, Lda.       *
-//*************************************************************************
-// This program is free software; you can redistribute it and/or modify   *
-// it under the terms of the GNU General Public License as published by   *
-// the Free Software Foundation; either version 2 of the License, or (at  *
-// your option) any later version.                                        *
-//                                                                        *
-// This program is distributed in the hope that it will be useful, but    *
-// WITHOUT ANY WARRANTY; without even the implied warranty of             *
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU       *
-// General Public License for more details.                               *
-//                                                                        *
-// You should have received a copy of the GNU General Public License      *
-// along with this program; if not, write to the Free Software            *
-// Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA          *
-// 02110-1301 USA.                                                        *
-//*************************************************************************
-//Author: Ricardo Martins                                                 *
-//*************************************************************************
+//*******************************************************************************
+// Copyright (C) 2016-2017 OceanScan - Marine Systems & Technology, Lda.        *
+//*******************************************************************************
+// This program is free software; you can redistribute it and/or modify it      *
+// under the terms of the GNU General Public License as published by the        *
+// Free Software Foundation; either version 2 of the License, or (at your       *
+// option) any later version.                                                   *
+//                                                                              *
+// This program is distributed in the hope that it will be useful, but          *
+// WITHOUT ANY WARRANTY; without even the implied warranty of                   *
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General     *
+// Public License for more details.                                             *
+//                                                                              *
+// You should have received a copy of the GNU General Public License along      *
+// with this program; if not, write to the Free Software Foundation, Inc.,      *
+// 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.                  *
+//*******************************************************************************
+// Automatically generated.                                                     *
+//*******************************************************************************
 
-#ifndef ROS_IMC_BROKER_IMC_TYPES_HPP_INCLUDED_
-#define ROS_IMC_BROKER_IMC_TYPES_HPP_INCLUDED_
+#ifndef IMC_BROKER_IMC_TYPES_HPP_INCLUDED_
+#define IMC_BROKER_IMC_TYPES_HPP_INCLUDED_
 
 // ROS headers.
 #include <ros/ros.h>
@@ -29,7 +28,6 @@
 
 // DUNE headers.
 #include <DUNE/DUNE.hpp>
-
 namespace ros
 {
   namespace message_traits
@@ -4071,7 +4069,7 @@ namespace ros
     {
       static const char* value()
       {
-        return "c05900ebb8bfb7e267d3589e9cd6f67e";
+        return "9f139d8ac305a7a76a9057783a37577f";
       }
 
       static const char* value(const DUNE::IMC::AcousticOperation& m)
@@ -5799,7 +5797,7 @@ namespace ros
     {
       static const char* value()
       {
-        return "db91194bede3e56b14154d5df0dc81d6";
+        return "6d2ea592d48fe1fa1bddf1ea0dbcce7c";
       }
 
       static const char* value(const DUNE::IMC::Salinity& m)
@@ -13935,7 +13933,7 @@ namespace ros
     {
       static const char* value()
       {
-        return "142f78d80fd528fe295d2563a310f222";
+        return "c6f5acbae58a47116076ef96bb1c102d";
       }
 
       static const char* value(const DUNE::IMC::RowsCoverage& m)
@@ -14280,6 +14278,150 @@ namespace ros
       }
 
       inline static uint32_t serializedLength(const DUNE::IMC::Land& t)
+      {
+        return t.getSerializationSize();
+      }
+    };
+  }
+}
+namespace ros
+{
+  namespace message_traits
+  {
+    template<>
+    struct MD5Sum<DUNE::IMC::AutonomousSection>
+    {
+      static const char* value()
+      {
+        return "04119dd56edeaf40b109ba89b0d3cf0c";
+      }
+
+      static const char* value(const DUNE::IMC::AutonomousSection& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct DataType<DUNE::IMC::AutonomousSection>
+    {
+      static const char* value()
+      {
+        return "imc/AutonomousSection";
+      }
+
+      static const char* value(const DUNE::IMC::AutonomousSection& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct Definition<DUNE::IMC::AutonomousSection>
+    {
+      static const char* value()
+      {
+        return "X";
+      }
+
+      static const char* value(const DUNE::IMC::AutonomousSection& m)
+      {
+        return value();
+      }
+    };
+  }
+
+  namespace serialization
+  {
+    template<>
+    struct Serializer<DUNE::IMC::AutonomousSection>
+    {
+      template<typename Stream>
+      inline static void write(Stream& stream, const DUNE::IMC::AutonomousSection& t)
+      {
+        size_t size = t.getSerializationSize();
+        DUNE::IMC::Packet::serialize(&t, stream.advance(size), size);
+      }
+
+      template<typename Stream>
+      inline static void read(Stream& stream, DUNE::IMC::AutonomousSection& t)
+      {
+        DUNE::IMC::Message* msg = DUNE::IMC::Packet::deserialize(stream.getData(), stream.getLength(), &t);
+      }
+
+      inline static uint32_t serializedLength(const DUNE::IMC::AutonomousSection& t)
+      {
+        return t.getSerializationSize();
+      }
+    };
+  }
+}
+namespace ros
+{
+  namespace message_traits
+  {
+    template<>
+    struct MD5Sum<DUNE::IMC::FollowPoint>
+    {
+      static const char* value()
+      {
+        return "d3b28b84b48950ec04c83e6c3ca11b52";
+      }
+
+      static const char* value(const DUNE::IMC::FollowPoint& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct DataType<DUNE::IMC::FollowPoint>
+    {
+      static const char* value()
+      {
+        return "imc/FollowPoint";
+      }
+
+      static const char* value(const DUNE::IMC::FollowPoint& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct Definition<DUNE::IMC::FollowPoint>
+    {
+      static const char* value()
+      {
+        return "X";
+      }
+
+      static const char* value(const DUNE::IMC::FollowPoint& m)
+      {
+        return value();
+      }
+    };
+  }
+
+  namespace serialization
+  {
+    template<>
+    struct Serializer<DUNE::IMC::FollowPoint>
+    {
+      template<typename Stream>
+      inline static void write(Stream& stream, const DUNE::IMC::FollowPoint& t)
+      {
+        size_t size = t.getSerializationSize();
+        DUNE::IMC::Packet::serialize(&t, stream.advance(size), size);
+      }
+
+      template<typename Stream>
+      inline static void read(Stream& stream, DUNE::IMC::FollowPoint& t)
+      {
+        DUNE::IMC::Message* msg = DUNE::IMC::Packet::deserialize(stream.getData(), stream.getLength(), &t);
+      }
+
+      inline static uint32_t serializedLength(const DUNE::IMC::FollowPoint& t)
       {
         return t.getSerializationSize();
       }
@@ -20544,6 +20686,2238 @@ namespace ros
       }
 
       inline static uint32_t serializedLength(const DUNE::IMC::Tachograph& t)
+      {
+        return t.getSerializationSize();
+      }
+    };
+  }
+}
+namespace ros
+{
+  namespace message_traits
+  {
+    template<>
+    struct MD5Sum<DUNE::IMC::ApmStatus>
+    {
+      static const char* value()
+      {
+        return "fbf77c67ccf727d64a66f09c65efce18";
+      }
+
+      static const char* value(const DUNE::IMC::ApmStatus& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct DataType<DUNE::IMC::ApmStatus>
+    {
+      static const char* value()
+      {
+        return "imc/ApmStatus";
+      }
+
+      static const char* value(const DUNE::IMC::ApmStatus& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct Definition<DUNE::IMC::ApmStatus>
+    {
+      static const char* value()
+      {
+        return "X";
+      }
+
+      static const char* value(const DUNE::IMC::ApmStatus& m)
+      {
+        return value();
+      }
+    };
+  }
+
+  namespace serialization
+  {
+    template<>
+    struct Serializer<DUNE::IMC::ApmStatus>
+    {
+      template<typename Stream>
+      inline static void write(Stream& stream, const DUNE::IMC::ApmStatus& t)
+      {
+        size_t size = t.getSerializationSize();
+        DUNE::IMC::Packet::serialize(&t, stream.advance(size), size);
+      }
+
+      template<typename Stream>
+      inline static void read(Stream& stream, DUNE::IMC::ApmStatus& t)
+      {
+        DUNE::IMC::Message* msg = DUNE::IMC::Packet::deserialize(stream.getData(), stream.getLength(), &t);
+      }
+
+      inline static uint32_t serializedLength(const DUNE::IMC::ApmStatus& t)
+      {
+        return t.getSerializationSize();
+      }
+    };
+  }
+}
+namespace ros
+{
+  namespace message_traits
+  {
+    template<>
+    struct MD5Sum<DUNE::IMC::SadcReadings>
+    {
+      static const char* value()
+      {
+        return "165a477d15ca971c6159558c92275f49";
+      }
+
+      static const char* value(const DUNE::IMC::SadcReadings& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct DataType<DUNE::IMC::SadcReadings>
+    {
+      static const char* value()
+      {
+        return "imc/SadcReadings";
+      }
+
+      static const char* value(const DUNE::IMC::SadcReadings& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct Definition<DUNE::IMC::SadcReadings>
+    {
+      static const char* value()
+      {
+        return "X";
+      }
+
+      static const char* value(const DUNE::IMC::SadcReadings& m)
+      {
+        return value();
+      }
+    };
+  }
+
+  namespace serialization
+  {
+    template<>
+    struct Serializer<DUNE::IMC::SadcReadings>
+    {
+      template<typename Stream>
+      inline static void write(Stream& stream, const DUNE::IMC::SadcReadings& t)
+      {
+        size_t size = t.getSerializationSize();
+        DUNE::IMC::Packet::serialize(&t, stream.advance(size), size);
+      }
+
+      template<typename Stream>
+      inline static void read(Stream& stream, DUNE::IMC::SadcReadings& t)
+      {
+        DUNE::IMC::Message* msg = DUNE::IMC::Packet::deserialize(stream.getData(), stream.getLength(), &t);
+      }
+
+      inline static uint32_t serializedLength(const DUNE::IMC::SadcReadings& t)
+      {
+        return t.getSerializationSize();
+      }
+    };
+  }
+}
+namespace ros
+{
+  namespace message_traits
+  {
+    template<>
+    struct MD5Sum<DUNE::IMC::Ping>
+    {
+      static const char* value()
+      {
+        return "45b082a65d9e7086f452934efba2ffe1";
+      }
+
+      static const char* value(const DUNE::IMC::Ping& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct DataType<DUNE::IMC::Ping>
+    {
+      static const char* value()
+      {
+        return "imc/Ping";
+      }
+
+      static const char* value(const DUNE::IMC::Ping& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct Definition<DUNE::IMC::Ping>
+    {
+      static const char* value()
+      {
+        return "X";
+      }
+
+      static const char* value(const DUNE::IMC::Ping& m)
+      {
+        return value();
+      }
+    };
+  }
+
+  namespace serialization
+  {
+    template<>
+    struct Serializer<DUNE::IMC::Ping>
+    {
+      template<typename Stream>
+      inline static void write(Stream& stream, const DUNE::IMC::Ping& t)
+      {
+        size_t size = t.getSerializationSize();
+        DUNE::IMC::Packet::serialize(&t, stream.advance(size), size);
+      }
+
+      template<typename Stream>
+      inline static void read(Stream& stream, DUNE::IMC::Ping& t)
+      {
+        DUNE::IMC::Message* msg = DUNE::IMC::Packet::deserialize(stream.getData(), stream.getLength(), &t);
+      }
+
+      inline static uint32_t serializedLength(const DUNE::IMC::Ping& t)
+      {
+        return t.getSerializationSize();
+      }
+    };
+  }
+}
+namespace ros
+{
+  namespace message_traits
+  {
+    template<>
+    struct MD5Sum<DUNE::IMC::Weight>
+    {
+      static const char* value()
+      {
+        return "c5e19b4f1be9786af4819cd6d227eb31";
+      }
+
+      static const char* value(const DUNE::IMC::Weight& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct DataType<DUNE::IMC::Weight>
+    {
+      static const char* value()
+      {
+        return "imc/Weight";
+      }
+
+      static const char* value(const DUNE::IMC::Weight& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct Definition<DUNE::IMC::Weight>
+    {
+      static const char* value()
+      {
+        return "X";
+      }
+
+      static const char* value(const DUNE::IMC::Weight& m)
+      {
+        return value();
+      }
+    };
+  }
+
+  namespace serialization
+  {
+    template<>
+    struct Serializer<DUNE::IMC::Weight>
+    {
+      template<typename Stream>
+      inline static void write(Stream& stream, const DUNE::IMC::Weight& t)
+      {
+        size_t size = t.getSerializationSize();
+        DUNE::IMC::Packet::serialize(&t, stream.advance(size), size);
+      }
+
+      template<typename Stream>
+      inline static void read(Stream& stream, DUNE::IMC::Weight& t)
+      {
+        DUNE::IMC::Message* msg = DUNE::IMC::Packet::deserialize(stream.getData(), stream.getLength(), &t);
+      }
+
+      inline static uint32_t serializedLength(const DUNE::IMC::Weight& t)
+      {
+        return t.getSerializationSize();
+      }
+    };
+  }
+}
+namespace ros
+{
+  namespace message_traits
+  {
+    template<>
+    struct MD5Sum<DUNE::IMC::RadarFrame>
+    {
+      static const char* value()
+      {
+        return "07c32b21d4d3d0b42b0f3a1034be5030";
+      }
+
+      static const char* value(const DUNE::IMC::RadarFrame& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct DataType<DUNE::IMC::RadarFrame>
+    {
+      static const char* value()
+      {
+        return "imc/RadarFrame";
+      }
+
+      static const char* value(const DUNE::IMC::RadarFrame& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct Definition<DUNE::IMC::RadarFrame>
+    {
+      static const char* value()
+      {
+        return "X";
+      }
+
+      static const char* value(const DUNE::IMC::RadarFrame& m)
+      {
+        return value();
+      }
+    };
+  }
+
+  namespace serialization
+  {
+    template<>
+    struct Serializer<DUNE::IMC::RadarFrame>
+    {
+      template<typename Stream>
+      inline static void write(Stream& stream, const DUNE::IMC::RadarFrame& t)
+      {
+        size_t size = t.getSerializationSize();
+        DUNE::IMC::Packet::serialize(&t, stream.advance(size), size);
+      }
+
+      template<typename Stream>
+      inline static void read(Stream& stream, DUNE::IMC::RadarFrame& t)
+      {
+        DUNE::IMC::Message* msg = DUNE::IMC::Packet::deserialize(stream.getData(), stream.getLength(), &t);
+      }
+
+      inline static uint32_t serializedLength(const DUNE::IMC::RadarFrame& t)
+      {
+        return t.getSerializationSize();
+      }
+    };
+  }
+}
+namespace ros
+{
+  namespace message_traits
+  {
+    template<>
+    struct MD5Sum<DUNE::IMC::RadarStatus>
+    {
+      static const char* value()
+      {
+        return "4f20da54619f42d80baf2e9b8ffdad79";
+      }
+
+      static const char* value(const DUNE::IMC::RadarStatus& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct DataType<DUNE::IMC::RadarStatus>
+    {
+      static const char* value()
+      {
+        return "imc/RadarStatus";
+      }
+
+      static const char* value(const DUNE::IMC::RadarStatus& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct Definition<DUNE::IMC::RadarStatus>
+    {
+      static const char* value()
+      {
+        return "X";
+      }
+
+      static const char* value(const DUNE::IMC::RadarStatus& m)
+      {
+        return value();
+      }
+    };
+  }
+
+  namespace serialization
+  {
+    template<>
+    struct Serializer<DUNE::IMC::RadarStatus>
+    {
+      template<typename Stream>
+      inline static void write(Stream& stream, const DUNE::IMC::RadarStatus& t)
+      {
+        size_t size = t.getSerializationSize();
+        DUNE::IMC::Packet::serialize(&t, stream.advance(size), size);
+      }
+
+      template<typename Stream>
+      inline static void read(Stream& stream, DUNE::IMC::RadarStatus& t)
+      {
+        DUNE::IMC::Message* msg = DUNE::IMC::Packet::deserialize(stream.getData(), stream.getLength(), &t);
+      }
+
+      inline static uint32_t serializedLength(const DUNE::IMC::RadarStatus& t)
+      {
+        return t.getSerializationSize();
+      }
+    };
+  }
+}
+namespace ros
+{
+  namespace message_traits
+  {
+    template<>
+    struct MD5Sum<DUNE::IMC::BeaconDistance>
+    {
+      static const char* value()
+      {
+        return "7577f2decf25463fbe594bdacc996a8b";
+      }
+
+      static const char* value(const DUNE::IMC::BeaconDistance& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct DataType<DUNE::IMC::BeaconDistance>
+    {
+      static const char* value()
+      {
+        return "imc/BeaconDistance";
+      }
+
+      static const char* value(const DUNE::IMC::BeaconDistance& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct Definition<DUNE::IMC::BeaconDistance>
+    {
+      static const char* value()
+      {
+        return "X";
+      }
+
+      static const char* value(const DUNE::IMC::BeaconDistance& m)
+      {
+        return value();
+      }
+    };
+  }
+
+  namespace serialization
+  {
+    template<>
+    struct Serializer<DUNE::IMC::BeaconDistance>
+    {
+      template<typename Stream>
+      inline static void write(Stream& stream, const DUNE::IMC::BeaconDistance& t)
+      {
+        size_t size = t.getSerializationSize();
+        DUNE::IMC::Packet::serialize(&t, stream.advance(size), size);
+      }
+
+      template<typename Stream>
+      inline static void read(Stream& stream, DUNE::IMC::BeaconDistance& t)
+      {
+        DUNE::IMC::Message* msg = DUNE::IMC::Packet::deserialize(stream.getData(), stream.getLength(), &t);
+      }
+
+      inline static uint32_t serializedLength(const DUNE::IMC::BeaconDistance& t)
+      {
+        return t.getSerializationSize();
+      }
+    };
+  }
+}
+namespace ros
+{
+  namespace message_traits
+  {
+    template<>
+    struct MD5Sum<DUNE::IMC::ViconPositionEstimates>
+    {
+      static const char* value()
+      {
+        return "c74b9217791bad7481164e8afd76611f";
+      }
+
+      static const char* value(const DUNE::IMC::ViconPositionEstimates& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct DataType<DUNE::IMC::ViconPositionEstimates>
+    {
+      static const char* value()
+      {
+        return "imc/ViconPositionEstimates";
+      }
+
+      static const char* value(const DUNE::IMC::ViconPositionEstimates& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct Definition<DUNE::IMC::ViconPositionEstimates>
+    {
+      static const char* value()
+      {
+        return "X";
+      }
+
+      static const char* value(const DUNE::IMC::ViconPositionEstimates& m)
+      {
+        return value();
+      }
+    };
+  }
+
+  namespace serialization
+  {
+    template<>
+    struct Serializer<DUNE::IMC::ViconPositionEstimates>
+    {
+      template<typename Stream>
+      inline static void write(Stream& stream, const DUNE::IMC::ViconPositionEstimates& t)
+      {
+        size_t size = t.getSerializationSize();
+        DUNE::IMC::Packet::serialize(&t, stream.advance(size), size);
+      }
+
+      template<typename Stream>
+      inline static void read(Stream& stream, DUNE::IMC::ViconPositionEstimates& t)
+      {
+        DUNE::IMC::Message* msg = DUNE::IMC::Packet::deserialize(stream.getData(), stream.getLength(), &t);
+      }
+
+      inline static uint32_t serializedLength(const DUNE::IMC::ViconPositionEstimates& t)
+      {
+        return t.getSerializationSize();
+      }
+    };
+  }
+}
+namespace ros
+{
+  namespace message_traits
+  {
+    template<>
+    struct MD5Sum<DUNE::IMC::NavSources>
+    {
+      static const char* value()
+      {
+        return "6a7a3428f8d438fcfec950df4b645d19";
+      }
+
+      static const char* value(const DUNE::IMC::NavSources& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct DataType<DUNE::IMC::NavSources>
+    {
+      static const char* value()
+      {
+        return "imc/NavSources";
+      }
+
+      static const char* value(const DUNE::IMC::NavSources& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct Definition<DUNE::IMC::NavSources>
+    {
+      static const char* value()
+      {
+        return "X";
+      }
+
+      static const char* value(const DUNE::IMC::NavSources& m)
+      {
+        return value();
+      }
+    };
+  }
+
+  namespace serialization
+  {
+    template<>
+    struct Serializer<DUNE::IMC::NavSources>
+    {
+      template<typename Stream>
+      inline static void write(Stream& stream, const DUNE::IMC::NavSources& t)
+      {
+        size_t size = t.getSerializationSize();
+        DUNE::IMC::Packet::serialize(&t, stream.advance(size), size);
+      }
+
+      template<typename Stream>
+      inline static void read(Stream& stream, DUNE::IMC::NavSources& t)
+      {
+        DUNE::IMC::Message* msg = DUNE::IMC::Packet::deserialize(stream.getData(), stream.getLength(), &t);
+      }
+
+      inline static uint32_t serializedLength(const DUNE::IMC::NavSources& t)
+      {
+        return t.getSerializationSize();
+      }
+    };
+  }
+}
+namespace ros
+{
+  namespace message_traits
+  {
+    template<>
+    struct MD5Sum<DUNE::IMC::ManeuverComplete>
+    {
+      static const char* value()
+      {
+        return "53c45e7716a1566c9558ec738109c064";
+      }
+
+      static const char* value(const DUNE::IMC::ManeuverComplete& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct DataType<DUNE::IMC::ManeuverComplete>
+    {
+      static const char* value()
+      {
+        return "imc/ManeuverComplete";
+      }
+
+      static const char* value(const DUNE::IMC::ManeuverComplete& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct Definition<DUNE::IMC::ManeuverComplete>
+    {
+      static const char* value()
+      {
+        return "X";
+      }
+
+      static const char* value(const DUNE::IMC::ManeuverComplete& m)
+      {
+        return value();
+      }
+    };
+  }
+
+  namespace serialization
+  {
+    template<>
+    struct Serializer<DUNE::IMC::ManeuverComplete>
+    {
+      template<typename Stream>
+      inline static void write(Stream& stream, const DUNE::IMC::ManeuverComplete& t)
+      {
+        size_t size = t.getSerializationSize();
+        DUNE::IMC::Packet::serialize(&t, stream.advance(size), size);
+      }
+
+      template<typename Stream>
+      inline static void read(Stream& stream, DUNE::IMC::ManeuverComplete& t)
+      {
+        DUNE::IMC::Message* msg = DUNE::IMC::Packet::deserialize(stream.getData(), stream.getLength(), &t);
+      }
+
+      inline static uint32_t serializedLength(const DUNE::IMC::ManeuverComplete& t)
+      {
+        return t.getSerializationSize();
+      }
+    };
+  }
+}
+namespace ros
+{
+  namespace message_traits
+  {
+    template<>
+    struct MD5Sum<DUNE::IMC::DesiredNetRecoveryPath>
+    {
+      static const char* value()
+      {
+        return "257b12fd7755ad88598757ef0b4eb34c";
+      }
+
+      static const char* value(const DUNE::IMC::DesiredNetRecoveryPath& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct DataType<DUNE::IMC::DesiredNetRecoveryPath>
+    {
+      static const char* value()
+      {
+        return "imc/DesiredNetRecoveryPath";
+      }
+
+      static const char* value(const DUNE::IMC::DesiredNetRecoveryPath& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct Definition<DUNE::IMC::DesiredNetRecoveryPath>
+    {
+      static const char* value()
+      {
+        return "X";
+      }
+
+      static const char* value(const DUNE::IMC::DesiredNetRecoveryPath& m)
+      {
+        return value();
+      }
+    };
+  }
+
+  namespace serialization
+  {
+    template<>
+    struct Serializer<DUNE::IMC::DesiredNetRecoveryPath>
+    {
+      template<typename Stream>
+      inline static void write(Stream& stream, const DUNE::IMC::DesiredNetRecoveryPath& t)
+      {
+        size_t size = t.getSerializationSize();
+        DUNE::IMC::Packet::serialize(&t, stream.advance(size), size);
+      }
+
+      template<typename Stream>
+      inline static void read(Stream& stream, DUNE::IMC::DesiredNetRecoveryPath& t)
+      {
+        DUNE::IMC::Message* msg = DUNE::IMC::Packet::deserialize(stream.getData(), stream.getLength(), &t);
+      }
+
+      inline static uint32_t serializedLength(const DUNE::IMC::DesiredNetRecoveryPath& t)
+      {
+        return t.getSerializationSize();
+      }
+    };
+  }
+}
+namespace ros
+{
+  namespace message_traits
+  {
+    template<>
+    struct MD5Sum<DUNE::IMC::DesiredSlavePath>
+    {
+      static const char* value()
+      {
+        return "f33adfdee7225ce333c23ea1c33c11ee";
+      }
+
+      static const char* value(const DUNE::IMC::DesiredSlavePath& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct DataType<DUNE::IMC::DesiredSlavePath>
+    {
+      static const char* value()
+      {
+        return "imc/DesiredSlavePath";
+      }
+
+      static const char* value(const DUNE::IMC::DesiredSlavePath& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct Definition<DUNE::IMC::DesiredSlavePath>
+    {
+      static const char* value()
+      {
+        return "X";
+      }
+
+      static const char* value(const DUNE::IMC::DesiredSlavePath& m)
+      {
+        return value();
+      }
+    };
+  }
+
+  namespace serialization
+  {
+    template<>
+    struct Serializer<DUNE::IMC::DesiredSlavePath>
+    {
+      template<typename Stream>
+      inline static void write(Stream& stream, const DUNE::IMC::DesiredSlavePath& t)
+      {
+        size_t size = t.getSerializationSize();
+        DUNE::IMC::Packet::serialize(&t, stream.advance(size), size);
+      }
+
+      template<typename Stream>
+      inline static void read(Stream& stream, DUNE::IMC::DesiredSlavePath& t)
+      {
+        DUNE::IMC::Message* msg = DUNE::IMC::Packet::deserialize(stream.getData(), stream.getLength(), &t);
+      }
+
+      inline static uint32_t serializedLength(const DUNE::IMC::DesiredSlavePath& t)
+      {
+        return t.getSerializationSize();
+      }
+    };
+  }
+}
+namespace ros
+{
+  namespace message_traits
+  {
+    template<>
+    struct MD5Sum<DUNE::IMC::NetRecovery>
+    {
+      static const char* value()
+      {
+        return "6b2e49a35867aa5f8ec9bcf42434c37e";
+      }
+
+      static const char* value(const DUNE::IMC::NetRecovery& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct DataType<DUNE::IMC::NetRecovery>
+    {
+      static const char* value()
+      {
+        return "imc/NetRecovery";
+      }
+
+      static const char* value(const DUNE::IMC::NetRecovery& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct Definition<DUNE::IMC::NetRecovery>
+    {
+      static const char* value()
+      {
+        return "X";
+      }
+
+      static const char* value(const DUNE::IMC::NetRecovery& m)
+      {
+        return value();
+      }
+    };
+  }
+
+  namespace serialization
+  {
+    template<>
+    struct Serializer<DUNE::IMC::NetRecovery>
+    {
+      template<typename Stream>
+      inline static void write(Stream& stream, const DUNE::IMC::NetRecovery& t)
+      {
+        size_t size = t.getSerializationSize();
+        DUNE::IMC::Packet::serialize(&t, stream.advance(size), size);
+      }
+
+      template<typename Stream>
+      inline static void read(Stream& stream, DUNE::IMC::NetRecovery& t)
+      {
+        DUNE::IMC::Message* msg = DUNE::IMC::Packet::deserialize(stream.getData(), stream.getLength(), &t);
+      }
+
+      inline static uint32_t serializedLength(const DUNE::IMC::NetRecovery& t)
+      {
+        return t.getSerializationSize();
+      }
+    };
+  }
+}
+namespace ros
+{
+  namespace message_traits
+  {
+    template<>
+    struct MD5Sum<DUNE::IMC::SlaveManeuver>
+    {
+      static const char* value()
+      {
+        return "53df56c6dd52c88fefa53803fcb1e9b5";
+      }
+
+      static const char* value(const DUNE::IMC::SlaveManeuver& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct DataType<DUNE::IMC::SlaveManeuver>
+    {
+      static const char* value()
+      {
+        return "imc/SlaveManeuver";
+      }
+
+      static const char* value(const DUNE::IMC::SlaveManeuver& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct Definition<DUNE::IMC::SlaveManeuver>
+    {
+      static const char* value()
+      {
+        return "X";
+      }
+
+      static const char* value(const DUNE::IMC::SlaveManeuver& m)
+      {
+        return value();
+      }
+    };
+  }
+
+  namespace serialization
+  {
+    template<>
+    struct Serializer<DUNE::IMC::SlaveManeuver>
+    {
+      template<typename Stream>
+      inline static void write(Stream& stream, const DUNE::IMC::SlaveManeuver& t)
+      {
+        size_t size = t.getSerializationSize();
+        DUNE::IMC::Packet::serialize(&t, stream.advance(size), size);
+      }
+
+      template<typename Stream>
+      inline static void read(Stream& stream, DUNE::IMC::SlaveManeuver& t)
+      {
+        DUNE::IMC::Message* msg = DUNE::IMC::Packet::deserialize(stream.getData(), stream.getLength(), &t);
+      }
+
+      inline static uint32_t serializedLength(const DUNE::IMC::SlaveManeuver& t)
+      {
+        return t.getSerializationSize();
+      }
+    };
+  }
+}
+namespace ros
+{
+  namespace message_traits
+  {
+    template<>
+    struct MD5Sum<DUNE::IMC::CoordinatedNetRecovery>
+    {
+      static const char* value()
+      {
+        return "62ed413507b030e05f566955bbc1b67f";
+      }
+
+      static const char* value(const DUNE::IMC::CoordinatedNetRecovery& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct DataType<DUNE::IMC::CoordinatedNetRecovery>
+    {
+      static const char* value()
+      {
+        return "imc/CoordinatedNetRecovery";
+      }
+
+      static const char* value(const DUNE::IMC::CoordinatedNetRecovery& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct Definition<DUNE::IMC::CoordinatedNetRecovery>
+    {
+      static const char* value()
+      {
+        return "X";
+      }
+
+      static const char* value(const DUNE::IMC::CoordinatedNetRecovery& m)
+      {
+        return value();
+      }
+    };
+  }
+
+  namespace serialization
+  {
+    template<>
+    struct Serializer<DUNE::IMC::CoordinatedNetRecovery>
+    {
+      template<typename Stream>
+      inline static void write(Stream& stream, const DUNE::IMC::CoordinatedNetRecovery& t)
+      {
+        size_t size = t.getSerializationSize();
+        DUNE::IMC::Packet::serialize(&t, stream.advance(size), size);
+      }
+
+      template<typename Stream>
+      inline static void read(Stream& stream, DUNE::IMC::CoordinatedNetRecovery& t)
+      {
+        DUNE::IMC::Message* msg = DUNE::IMC::Packet::deserialize(stream.getData(), stream.getLength(), &t);
+      }
+
+      inline static uint32_t serializedLength(const DUNE::IMC::CoordinatedNetRecovery& t)
+      {
+        return t.getSerializationSize();
+      }
+    };
+  }
+}
+namespace ros
+{
+  namespace message_traits
+  {
+    template<>
+    struct MD5Sum<DUNE::IMC::NetRecoveryState>
+    {
+      static const char* value()
+      {
+        return "65e69b9c4fa65bd5b236a4fbee800fed";
+      }
+
+      static const char* value(const DUNE::IMC::NetRecoveryState& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct DataType<DUNE::IMC::NetRecoveryState>
+    {
+      static const char* value()
+      {
+        return "imc/NetRecoveryState";
+      }
+
+      static const char* value(const DUNE::IMC::NetRecoveryState& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct Definition<DUNE::IMC::NetRecoveryState>
+    {
+      static const char* value()
+      {
+        return "X";
+      }
+
+      static const char* value(const DUNE::IMC::NetRecoveryState& m)
+      {
+        return value();
+      }
+    };
+  }
+
+  namespace serialization
+  {
+    template<>
+    struct Serializer<DUNE::IMC::NetRecoveryState>
+    {
+      template<typename Stream>
+      inline static void write(Stream& stream, const DUNE::IMC::NetRecoveryState& t)
+      {
+        size_t size = t.getSerializationSize();
+        DUNE::IMC::Packet::serialize(&t, stream.advance(size), size);
+      }
+
+      template<typename Stream>
+      inline static void read(Stream& stream, DUNE::IMC::NetRecoveryState& t)
+      {
+        DUNE::IMC::Message* msg = DUNE::IMC::Packet::deserialize(stream.getData(), stream.getLength(), &t);
+      }
+
+      inline static uint32_t serializedLength(const DUNE::IMC::NetRecoveryState& t)
+      {
+        return t.getSerializationSize();
+      }
+    };
+  }
+}
+namespace ros
+{
+  namespace message_traits
+  {
+    template<>
+    struct MD5Sum<DUNE::IMC::SlaveState>
+    {
+      static const char* value()
+      {
+        return "c6210f404ddcb4ed7744380e785c2626";
+      }
+
+      static const char* value(const DUNE::IMC::SlaveState& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct DataType<DUNE::IMC::SlaveState>
+    {
+      static const char* value()
+      {
+        return "imc/SlaveState";
+      }
+
+      static const char* value(const DUNE::IMC::SlaveState& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct Definition<DUNE::IMC::SlaveState>
+    {
+      static const char* value()
+      {
+        return "X";
+      }
+
+      static const char* value(const DUNE::IMC::SlaveState& m)
+      {
+        return value();
+      }
+    };
+  }
+
+  namespace serialization
+  {
+    template<>
+    struct Serializer<DUNE::IMC::SlaveState>
+    {
+      template<typename Stream>
+      inline static void write(Stream& stream, const DUNE::IMC::SlaveState& t)
+      {
+        size_t size = t.getSerializationSize();
+        DUNE::IMC::Packet::serialize(&t, stream.advance(size), size);
+      }
+
+      template<typename Stream>
+      inline static void read(Stream& stream, DUNE::IMC::SlaveState& t)
+      {
+        DUNE::IMC::Message* msg = DUNE::IMC::Packet::deserialize(stream.getData(), stream.getLength(), &t);
+      }
+
+      inline static uint32_t serializedLength(const DUNE::IMC::SlaveState& t)
+      {
+        return t.getSerializationSize();
+      }
+    };
+  }
+}
+namespace ros
+{
+  namespace message_traits
+  {
+    template<>
+    struct MD5Sum<DUNE::IMC::ControlProfile>
+    {
+      static const char* value()
+      {
+        return "178ce394655b09433c8ac9bbc3285554";
+      }
+
+      static const char* value(const DUNE::IMC::ControlProfile& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct DataType<DUNE::IMC::ControlProfile>
+    {
+      static const char* value()
+      {
+        return "imc/ControlProfile";
+      }
+
+      static const char* value(const DUNE::IMC::ControlProfile& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct Definition<DUNE::IMC::ControlProfile>
+    {
+      static const char* value()
+      {
+        return "X";
+      }
+
+      static const char* value(const DUNE::IMC::ControlProfile& m)
+      {
+        return value();
+      }
+    };
+  }
+
+  namespace serialization
+  {
+    template<>
+    struct Serializer<DUNE::IMC::ControlProfile>
+    {
+      template<typename Stream>
+      inline static void write(Stream& stream, const DUNE::IMC::ControlProfile& t)
+      {
+        size_t size = t.getSerializationSize();
+        DUNE::IMC::Packet::serialize(&t, stream.advance(size), size);
+      }
+
+      template<typename Stream>
+      inline static void read(Stream& stream, DUNE::IMC::ControlProfile& t)
+      {
+        DUNE::IMC::Message* msg = DUNE::IMC::Packet::deserialize(stream.getData(), stream.getLength(), &t);
+      }
+
+      inline static uint32_t serializedLength(const DUNE::IMC::ControlProfile& t)
+      {
+        return t.getSerializationSize();
+      }
+    };
+  }
+}
+namespace ros
+{
+  namespace message_traits
+  {
+    template<>
+    struct MD5Sum<DUNE::IMC::EstimatedLocalState>
+    {
+      static const char* value()
+      {
+        return "ca1641effaa0c9c2c9c2b1d2bd90f71a";
+      }
+
+      static const char* value(const DUNE::IMC::EstimatedLocalState& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct DataType<DUNE::IMC::EstimatedLocalState>
+    {
+      static const char* value()
+      {
+        return "imc/EstimatedLocalState";
+      }
+
+      static const char* value(const DUNE::IMC::EstimatedLocalState& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct Definition<DUNE::IMC::EstimatedLocalState>
+    {
+      static const char* value()
+      {
+        return "X";
+      }
+
+      static const char* value(const DUNE::IMC::EstimatedLocalState& m)
+      {
+        return value();
+      }
+    };
+  }
+
+  namespace serialization
+  {
+    template<>
+    struct Serializer<DUNE::IMC::EstimatedLocalState>
+    {
+      template<typename Stream>
+      inline static void write(Stream& stream, const DUNE::IMC::EstimatedLocalState& t)
+      {
+        size_t size = t.getSerializationSize();
+        DUNE::IMC::Packet::serialize(&t, stream.advance(size), size);
+      }
+
+      template<typename Stream>
+      inline static void read(Stream& stream, DUNE::IMC::EstimatedLocalState& t)
+      {
+        DUNE::IMC::Message* msg = DUNE::IMC::Packet::deserialize(stream.getData(), stream.getLength(), &t);
+      }
+
+      inline static uint32_t serializedLength(const DUNE::IMC::EstimatedLocalState& t)
+      {
+        return t.getSerializationSize();
+      }
+    };
+  }
+}
+namespace ros
+{
+  namespace message_traits
+  {
+    template<>
+    struct MD5Sum<DUNE::IMC::LandingPlanGeneration>
+    {
+      static const char* value()
+      {
+        return "1abe4df3dfad3fb2a6967b326e389907";
+      }
+
+      static const char* value(const DUNE::IMC::LandingPlanGeneration& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct DataType<DUNE::IMC::LandingPlanGeneration>
+    {
+      static const char* value()
+      {
+        return "imc/LandingPlanGeneration";
+      }
+
+      static const char* value(const DUNE::IMC::LandingPlanGeneration& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct Definition<DUNE::IMC::LandingPlanGeneration>
+    {
+      static const char* value()
+      {
+        return "X";
+      }
+
+      static const char* value(const DUNE::IMC::LandingPlanGeneration& m)
+      {
+        return value();
+      }
+    };
+  }
+
+  namespace serialization
+  {
+    template<>
+    struct Serializer<DUNE::IMC::LandingPlanGeneration>
+    {
+      template<typename Stream>
+      inline static void write(Stream& stream, const DUNE::IMC::LandingPlanGeneration& t)
+      {
+        size_t size = t.getSerializationSize();
+        DUNE::IMC::Packet::serialize(&t, stream.advance(size), size);
+      }
+
+      template<typename Stream>
+      inline static void read(Stream& stream, DUNE::IMC::LandingPlanGeneration& t)
+      {
+        DUNE::IMC::Message* msg = DUNE::IMC::Packet::deserialize(stream.getData(), stream.getLength(), &t);
+      }
+
+      inline static uint32_t serializedLength(const DUNE::IMC::LandingPlanGeneration& t)
+      {
+        return t.getSerializationSize();
+      }
+    };
+  }
+}
+namespace ros
+{
+  namespace message_traits
+  {
+    template<>
+    struct MD5Sum<DUNE::IMC::FormPos>
+    {
+      static const char* value()
+      {
+        return "b353251687b40039e46636d012665204";
+      }
+
+      static const char* value(const DUNE::IMC::FormPos& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct DataType<DUNE::IMC::FormPos>
+    {
+      static const char* value()
+      {
+        return "imc/FormPos";
+      }
+
+      static const char* value(const DUNE::IMC::FormPos& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct Definition<DUNE::IMC::FormPos>
+    {
+      static const char* value()
+      {
+        return "X";
+      }
+
+      static const char* value(const DUNE::IMC::FormPos& m)
+      {
+        return value();
+      }
+    };
+  }
+
+  namespace serialization
+  {
+    template<>
+    struct Serializer<DUNE::IMC::FormPos>
+    {
+      template<typename Stream>
+      inline static void write(Stream& stream, const DUNE::IMC::FormPos& t)
+      {
+        size_t size = t.getSerializationSize();
+        DUNE::IMC::Packet::serialize(&t, stream.advance(size), size);
+      }
+
+      template<typename Stream>
+      inline static void read(Stream& stream, DUNE::IMC::FormPos& t)
+      {
+        DUNE::IMC::Message* msg = DUNE::IMC::Packet::deserialize(stream.getData(), stream.getLength(), &t);
+      }
+
+      inline static uint32_t serializedLength(const DUNE::IMC::FormPos& t)
+      {
+        return t.getSerializationSize();
+      }
+    };
+  }
+}
+namespace ros
+{
+  namespace message_traits
+  {
+    template<>
+    struct MD5Sum<DUNE::IMC::FormCoord>
+    {
+      static const char* value()
+      {
+        return "a6674c52fc726c20149f31984be4c583";
+      }
+
+      static const char* value(const DUNE::IMC::FormCoord& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct DataType<DUNE::IMC::FormCoord>
+    {
+      static const char* value()
+      {
+        return "imc/FormCoord";
+      }
+
+      static const char* value(const DUNE::IMC::FormCoord& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct Definition<DUNE::IMC::FormCoord>
+    {
+      static const char* value()
+      {
+        return "X";
+      }
+
+      static const char* value(const DUNE::IMC::FormCoord& m)
+      {
+        return value();
+      }
+    };
+  }
+
+  namespace serialization
+  {
+    template<>
+    struct Serializer<DUNE::IMC::FormCoord>
+    {
+      template<typename Stream>
+      inline static void write(Stream& stream, const DUNE::IMC::FormCoord& t)
+      {
+        size_t size = t.getSerializationSize();
+        DUNE::IMC::Packet::serialize(&t, stream.advance(size), size);
+      }
+
+      template<typename Stream>
+      inline static void read(Stream& stream, DUNE::IMC::FormCoord& t)
+      {
+        DUNE::IMC::Message* msg = DUNE::IMC::Packet::deserialize(stream.getData(), stream.getLength(), &t);
+      }
+
+      inline static uint32_t serializedLength(const DUNE::IMC::FormCoord& t)
+      {
+        return t.getSerializationSize();
+      }
+    };
+  }
+}
+namespace ros
+{
+  namespace message_traits
+  {
+    template<>
+    struct MD5Sum<DUNE::IMC::CoordConfig>
+    {
+      static const char* value()
+      {
+        return "7dab77be5ee8fcf441fb989b0d404433";
+      }
+
+      static const char* value(const DUNE::IMC::CoordConfig& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct DataType<DUNE::IMC::CoordConfig>
+    {
+      static const char* value()
+      {
+        return "imc/CoordConfig";
+      }
+
+      static const char* value(const DUNE::IMC::CoordConfig& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct Definition<DUNE::IMC::CoordConfig>
+    {
+      static const char* value()
+      {
+        return "X";
+      }
+
+      static const char* value(const DUNE::IMC::CoordConfig& m)
+      {
+        return value();
+      }
+    };
+  }
+
+  namespace serialization
+  {
+    template<>
+    struct Serializer<DUNE::IMC::CoordConfig>
+    {
+      template<typename Stream>
+      inline static void write(Stream& stream, const DUNE::IMC::CoordConfig& t)
+      {
+        size_t size = t.getSerializationSize();
+        DUNE::IMC::Packet::serialize(&t, stream.advance(size), size);
+      }
+
+      template<typename Stream>
+      inline static void read(Stream& stream, DUNE::IMC::CoordConfig& t)
+      {
+        DUNE::IMC::Message* msg = DUNE::IMC::Packet::deserialize(stream.getData(), stream.getLength(), &t);
+      }
+
+      inline static uint32_t serializedLength(const DUNE::IMC::CoordConfig& t)
+      {
+        return t.getSerializationSize();
+      }
+    };
+  }
+}
+namespace ros
+{
+  namespace message_traits
+  {
+    template<>
+    struct MD5Sum<DUNE::IMC::CoordIncidenceAgent>
+    {
+      static const char* value()
+      {
+        return "d9d1a548e295fe600981330513f85a6b";
+      }
+
+      static const char* value(const DUNE::IMC::CoordIncidenceAgent& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct DataType<DUNE::IMC::CoordIncidenceAgent>
+    {
+      static const char* value()
+      {
+        return "imc/CoordIncidenceAgent";
+      }
+
+      static const char* value(const DUNE::IMC::CoordIncidenceAgent& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct Definition<DUNE::IMC::CoordIncidenceAgent>
+    {
+      static const char* value()
+      {
+        return "X";
+      }
+
+      static const char* value(const DUNE::IMC::CoordIncidenceAgent& m)
+      {
+        return value();
+      }
+    };
+  }
+
+  namespace serialization
+  {
+    template<>
+    struct Serializer<DUNE::IMC::CoordIncidenceAgent>
+    {
+      template<typename Stream>
+      inline static void write(Stream& stream, const DUNE::IMC::CoordIncidenceAgent& t)
+      {
+        size_t size = t.getSerializationSize();
+        DUNE::IMC::Packet::serialize(&t, stream.advance(size), size);
+      }
+
+      template<typename Stream>
+      inline static void read(Stream& stream, DUNE::IMC::CoordIncidenceAgent& t)
+      {
+        DUNE::IMC::Message* msg = DUNE::IMC::Packet::deserialize(stream.getData(), stream.getLength(), &t);
+      }
+
+      inline static uint32_t serializedLength(const DUNE::IMC::CoordIncidenceAgent& t)
+      {
+        return t.getSerializationSize();
+      }
+    };
+  }
+}
+namespace ros
+{
+  namespace message_traits
+  {
+    template<>
+    struct MD5Sum<DUNE::IMC::CoordIncidenceLink>
+    {
+      static const char* value()
+      {
+        return "208bb4f5abb408fabb3d1cdf18a8f4e9";
+      }
+
+      static const char* value(const DUNE::IMC::CoordIncidenceLink& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct DataType<DUNE::IMC::CoordIncidenceLink>
+    {
+      static const char* value()
+      {
+        return "imc/CoordIncidenceLink";
+      }
+
+      static const char* value(const DUNE::IMC::CoordIncidenceLink& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct Definition<DUNE::IMC::CoordIncidenceLink>
+    {
+      static const char* value()
+      {
+        return "X";
+      }
+
+      static const char* value(const DUNE::IMC::CoordIncidenceLink& m)
+      {
+        return value();
+      }
+    };
+  }
+
+  namespace serialization
+  {
+    template<>
+    struct Serializer<DUNE::IMC::CoordIncidenceLink>
+    {
+      template<typename Stream>
+      inline static void write(Stream& stream, const DUNE::IMC::CoordIncidenceLink& t)
+      {
+        size_t size = t.getSerializationSize();
+        DUNE::IMC::Packet::serialize(&t, stream.advance(size), size);
+      }
+
+      template<typename Stream>
+      inline static void read(Stream& stream, DUNE::IMC::CoordIncidenceLink& t)
+      {
+        DUNE::IMC::Message* msg = DUNE::IMC::Packet::deserialize(stream.getData(), stream.getLength(), &t);
+      }
+
+      inline static uint32_t serializedLength(const DUNE::IMC::CoordIncidenceLink& t)
+      {
+        return t.getSerializationSize();
+      }
+    };
+  }
+}
+namespace ros
+{
+  namespace message_traits
+  {
+    template<>
+    struct MD5Sum<DUNE::IMC::CoordLinkGain>
+    {
+      static const char* value()
+      {
+        return "651589c84e59f0b25ea4d374916955b4";
+      }
+
+      static const char* value(const DUNE::IMC::CoordLinkGain& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct DataType<DUNE::IMC::CoordLinkGain>
+    {
+      static const char* value()
+      {
+        return "imc/CoordLinkGain";
+      }
+
+      static const char* value(const DUNE::IMC::CoordLinkGain& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct Definition<DUNE::IMC::CoordLinkGain>
+    {
+      static const char* value()
+      {
+        return "X";
+      }
+
+      static const char* value(const DUNE::IMC::CoordLinkGain& m)
+      {
+        return value();
+      }
+    };
+  }
+
+  namespace serialization
+  {
+    template<>
+    struct Serializer<DUNE::IMC::CoordLinkGain>
+    {
+      template<typename Stream>
+      inline static void write(Stream& stream, const DUNE::IMC::CoordLinkGain& t)
+      {
+        size_t size = t.getSerializationSize();
+        DUNE::IMC::Packet::serialize(&t, stream.advance(size), size);
+      }
+
+      template<typename Stream>
+      inline static void read(Stream& stream, DUNE::IMC::CoordLinkGain& t)
+      {
+        DUNE::IMC::Message* msg = DUNE::IMC::Packet::deserialize(stream.getData(), stream.getLength(), &t);
+      }
+
+      inline static uint32_t serializedLength(const DUNE::IMC::CoordLinkGain& t)
+      {
+        return t.getSerializationSize();
+      }
+    };
+  }
+}
+namespace ros
+{
+  namespace message_traits
+  {
+    template<>
+    struct MD5Sum<DUNE::IMC::CoordLinkGainScheduler>
+    {
+      static const char* value()
+      {
+        return "3efe00d6f5d57c366e090ebef9f50fe6";
+      }
+
+      static const char* value(const DUNE::IMC::CoordLinkGainScheduler& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct DataType<DUNE::IMC::CoordLinkGainScheduler>
+    {
+      static const char* value()
+      {
+        return "imc/CoordLinkGainScheduler";
+      }
+
+      static const char* value(const DUNE::IMC::CoordLinkGainScheduler& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct Definition<DUNE::IMC::CoordLinkGainScheduler>
+    {
+      static const char* value()
+      {
+        return "X";
+      }
+
+      static const char* value(const DUNE::IMC::CoordLinkGainScheduler& m)
+      {
+        return value();
+      }
+    };
+  }
+
+  namespace serialization
+  {
+    template<>
+    struct Serializer<DUNE::IMC::CoordLinkGainScheduler>
+    {
+      template<typename Stream>
+      inline static void write(Stream& stream, const DUNE::IMC::CoordLinkGainScheduler& t)
+      {
+        size_t size = t.getSerializationSize();
+        DUNE::IMC::Packet::serialize(&t, stream.advance(size), size);
+      }
+
+      template<typename Stream>
+      inline static void read(Stream& stream, DUNE::IMC::CoordLinkGainScheduler& t)
+      {
+        DUNE::IMC::Message* msg = DUNE::IMC::Packet::deserialize(stream.getData(), stream.getLength(), &t);
+      }
+
+      inline static uint32_t serializedLength(const DUNE::IMC::CoordLinkGainScheduler& t)
+      {
+        return t.getSerializationSize();
+      }
+    };
+  }
+}
+namespace ros
+{
+  namespace message_traits
+  {
+    template<>
+    struct MD5Sum<DUNE::IMC::CoordinatorState>
+    {
+      static const char* value()
+      {
+        return "8be24e72e2af98627667d7aba0582a4c";
+      }
+
+      static const char* value(const DUNE::IMC::CoordinatorState& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct DataType<DUNE::IMC::CoordinatorState>
+    {
+      static const char* value()
+      {
+        return "imc/CoordinatorState";
+      }
+
+      static const char* value(const DUNE::IMC::CoordinatorState& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct Definition<DUNE::IMC::CoordinatorState>
+    {
+      static const char* value()
+      {
+        return "X";
+      }
+
+      static const char* value(const DUNE::IMC::CoordinatorState& m)
+      {
+        return value();
+      }
+    };
+  }
+
+  namespace serialization
+  {
+    template<>
+    struct Serializer<DUNE::IMC::CoordinatorState>
+    {
+      template<typename Stream>
+      inline static void write(Stream& stream, const DUNE::IMC::CoordinatorState& t)
+      {
+        size_t size = t.getSerializationSize();
+        DUNE::IMC::Packet::serialize(&t, stream.advance(size), size);
+      }
+
+      template<typename Stream>
+      inline static void read(Stream& stream, DUNE::IMC::CoordinatorState& t)
+      {
+        DUNE::IMC::Message* msg = DUNE::IMC::Packet::deserialize(stream.getData(), stream.getLength(), &t);
+      }
+
+      inline static uint32_t serializedLength(const DUNE::IMC::CoordinatorState& t)
+      {
+        return t.getSerializationSize();
+      }
+    };
+  }
+}
+namespace ros
+{
+  namespace message_traits
+  {
+    template<>
+    struct MD5Sum<DUNE::IMC::FormationLinkState>
+    {
+      static const char* value()
+      {
+        return "52fdfe14401b5d1197f19866c21b9af1";
+      }
+
+      static const char* value(const DUNE::IMC::FormationLinkState& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct DataType<DUNE::IMC::FormationLinkState>
+    {
+      static const char* value()
+      {
+        return "imc/FormationLinkState";
+      }
+
+      static const char* value(const DUNE::IMC::FormationLinkState& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct Definition<DUNE::IMC::FormationLinkState>
+    {
+      static const char* value()
+      {
+        return "X";
+      }
+
+      static const char* value(const DUNE::IMC::FormationLinkState& m)
+      {
+        return value();
+      }
+    };
+  }
+
+  namespace serialization
+  {
+    template<>
+    struct Serializer<DUNE::IMC::FormationLinkState>
+    {
+      template<typename Stream>
+      inline static void write(Stream& stream, const DUNE::IMC::FormationLinkState& t)
+      {
+        size_t size = t.getSerializationSize();
+        DUNE::IMC::Packet::serialize(&t, stream.advance(size), size);
+      }
+
+      template<typename Stream>
+      inline static void read(Stream& stream, DUNE::IMC::FormationLinkState& t)
+      {
+        DUNE::IMC::Message* msg = DUNE::IMC::Packet::deserialize(stream.getData(), stream.getLength(), &t);
+      }
+
+      inline static uint32_t serializedLength(const DUNE::IMC::FormationLinkState& t)
+      {
+        return t.getSerializationSize();
+      }
+    };
+  }
+}
+namespace ros
+{
+  namespace message_traits
+  {
+    template<>
+    struct MD5Sum<DUNE::IMC::FormationLinkError>
+    {
+      static const char* value()
+      {
+        return "8a122ee4f481c5bd9b649cb45fed19b7";
+      }
+
+      static const char* value(const DUNE::IMC::FormationLinkError& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct DataType<DUNE::IMC::FormationLinkError>
+    {
+      static const char* value()
+      {
+        return "imc/FormationLinkError";
+      }
+
+      static const char* value(const DUNE::IMC::FormationLinkError& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct Definition<DUNE::IMC::FormationLinkError>
+    {
+      static const char* value()
+      {
+        return "X";
+      }
+
+      static const char* value(const DUNE::IMC::FormationLinkError& m)
+      {
+        return value();
+      }
+    };
+  }
+
+  namespace serialization
+  {
+    template<>
+    struct Serializer<DUNE::IMC::FormationLinkError>
+    {
+      template<typename Stream>
+      inline static void write(Stream& stream, const DUNE::IMC::FormationLinkError& t)
+      {
+        size_t size = t.getSerializationSize();
+        DUNE::IMC::Packet::serialize(&t, stream.advance(size), size);
+      }
+
+      template<typename Stream>
+      inline static void read(Stream& stream, DUNE::IMC::FormationLinkError& t)
+      {
+        DUNE::IMC::Message* msg = DUNE::IMC::Packet::deserialize(stream.getData(), stream.getLength(), &t);
+      }
+
+      inline static uint32_t serializedLength(const DUNE::IMC::FormationLinkError& t)
+      {
+        return t.getSerializationSize();
+      }
+    };
+  }
+}
+namespace ros
+{
+  namespace message_traits
+  {
+    template<>
+    struct MD5Sum<DUNE::IMC::ExternalSystemMessage>
+    {
+      static const char* value()
+      {
+        return "bd77f4a2b48369c098b09ad6442fe06c";
+      }
+
+      static const char* value(const DUNE::IMC::ExternalSystemMessage& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct DataType<DUNE::IMC::ExternalSystemMessage>
+    {
+      static const char* value()
+      {
+        return "imc/ExternalSystemMessage";
+      }
+
+      static const char* value(const DUNE::IMC::ExternalSystemMessage& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct Definition<DUNE::IMC::ExternalSystemMessage>
+    {
+      static const char* value()
+      {
+        return "X";
+      }
+
+      static const char* value(const DUNE::IMC::ExternalSystemMessage& m)
+      {
+        return value();
+      }
+    };
+  }
+
+  namespace serialization
+  {
+    template<>
+    struct Serializer<DUNE::IMC::ExternalSystemMessage>
+    {
+      template<typename Stream>
+      inline static void write(Stream& stream, const DUNE::IMC::ExternalSystemMessage& t)
+      {
+        size_t size = t.getSerializationSize();
+        DUNE::IMC::Packet::serialize(&t, stream.advance(size), size);
+      }
+
+      template<typename Stream>
+      inline static void read(Stream& stream, DUNE::IMC::ExternalSystemMessage& t)
+      {
+        DUNE::IMC::Message* msg = DUNE::IMC::Packet::deserialize(stream.getData(), stream.getLength(), &t);
+      }
+
+      inline static uint32_t serializedLength(const DUNE::IMC::ExternalSystemMessage& t)
       {
         return t.getSerializationSize();
       }
