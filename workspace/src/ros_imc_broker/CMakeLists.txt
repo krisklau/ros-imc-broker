@@ -24,6 +24,7 @@ project(ros_imc_broker)
 
 # Additional CMake scripts and modules.
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_CURRENT_LIST_DIR}/cmake")
+set( CMAKE_CXX_FLAGS " -pthread " )
 
 # Find DUNE headers and libraries.
 find_package(DUNE REQUIRED)
