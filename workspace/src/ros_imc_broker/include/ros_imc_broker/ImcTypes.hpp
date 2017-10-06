@@ -21129,6 +21129,78 @@ namespace ros
   namespace message_traits
   {
     template<>
+    struct MD5Sum<DUNE::IMC::MocapState>
+    {
+      static const char* value()
+      {
+        return "46dd04c1a25841639fced51cf3ef5b9d";
+      }
+
+      static const char* value(const DUNE::IMC::MocapState& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct DataType<DUNE::IMC::MocapState>
+    {
+      static const char* value()
+      {
+        return "imc/MocapState";
+      }
+
+      static const char* value(const DUNE::IMC::MocapState& m)
+      {
+        return value();
+      }
+    };
+
+    template<>
+    struct Definition<DUNE::IMC::MocapState>
+    {
+      static const char* value()
+      {
+        return "X";
+      }
+
+      static const char* value(const DUNE::IMC::MocapState& m)
+      {
+        return value();
+      }
+    };
+  }
+
+  namespace serialization
+  {
+    template<>
+    struct Serializer<DUNE::IMC::MocapState>
+    {
+      template<typename Stream>
+      inline static void write(Stream& stream, const DUNE::IMC::MocapState& t)
+      {
+        size_t size = t.getSerializationSize();
+        DUNE::IMC::Packet::serialize(&t, stream.advance(size), size);
+      }
+
+      template<typename Stream>
+      inline static void read(Stream& stream, DUNE::IMC::MocapState& t)
+      {
+        DUNE::IMC::Message* msg = DUNE::IMC::Packet::deserialize(stream.getData(), stream.getLength(), &t);
+      }
+
+      inline static uint32_t serializedLength(const DUNE::IMC::MocapState& t)
+      {
+        return t.getSerializationSize();
+      }
+    };
+  }
+}
+namespace ros
+{
+  namespace message_traits
+  {
+    template<>
     struct MD5Sum<DUNE::IMC::BeaconDistance>
     {
       static const char* value()
