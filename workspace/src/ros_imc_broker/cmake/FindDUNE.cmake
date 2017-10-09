@@ -23,15 +23,15 @@
 
 set(_DUNE_SEARCH_PATHS)
 
-if(DUNE_ROOT)
-  set(_DUNE_SEARCH_ROOT PATHS ${DUNE_ROOT} NO_DEFAULT_PATH)
-  list(APPEND _DUNE_SEARCH_PATHS _DUNE_SEARCH_ROOT)
+if($ENV{DUNE_ROOT})
+  set(_DUNE_SEARCH_ROOT PATHS $ENV{DUNE_ROOT} NO_DEFAULT_PATH)
+  list(APPEND _DUNE_SEARCH_PATHS ${_DUNE_SEARCH_ROOT})
 endif()
 list(APPEND _DUNE_SEARCH_PATHS "/opt/lsts/dune" "/usr" "/usr/local")
 
 foreach(path ${_DUNE_SEARCH_PATHS})
-  find_path(DUNE_INCLUDE_DIR DUNE/DUNE.hpp PATHS $HOME/dune/build/_CPack_Packages/Linux/TBZ2/dune-2017.01.0-x86-64bit-linux-glibc-gcc54/include)
-  find_library(DUNE_LIBRARY NAMES dune-core PATHS $HOME/dune/build/_CPack_Packages/Linux/TBZ2/dune-2017.01.0-x86-64bit-linux-glibc-gcc54/lib)
+  find_path(DUNE_INCLUDE_DIR DUNE/DUNE.hpp HINTS ${path}/include)
+  find_library(DUNE_LIBRARY NAMES dune-core HINTS ${path}/lib)
 endforeach()
 
 include(FindPackageHandleStandardArgs)
