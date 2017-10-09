@@ -89,7 +89,7 @@ namespace ros_imc_broker
       catch (std::exception& e)
       {
         connected_ = false;
-        ROS_WARN("link closed: %s", e.what());
+        ROS_WARN_THROTTLE(1, "link closed: %s", e.what());
       }
     }
 
