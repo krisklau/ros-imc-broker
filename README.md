@@ -4,6 +4,25 @@ ROS IMC Broker is a [ROS](http://www.ros.org/) package that enables
 interoperability between ROS nodes and [IMC](https://github.com/LSTS/imc)
 capable systems.
 
+
+
+Using It
+=========
+The package can be used without docker and without having DUNE installed on the system level.
+
+* Build dune and generate a package
+```
+cd <your-dune-build-folder>
+make package
+```
+
+* Set the environment variable `DUNE_ROOT` to the location of the generated package. This is typically found under  `_CPack_Packages/Linux/TBZ2`
+```
+export DUNE_ROOT=<your-dune-build-folder>/_CPack_Packages/Linux/TBZ2/dune-*/
+```
+* You can also set this environment variable in your `.bashrc` file for convenience.
+* Your catkin workspace can now be build normally.
+
 Trying It
 =========
 
