@@ -30,8 +30,8 @@ endif()
 list(APPEND _DUNE_SEARCH_PATHS "/opt/lsts/dune" "/usr" "/usr/local")
 
 foreach(path ${_DUNE_SEARCH_PATHS})
-  find_path(DUNE_INCLUDE_DIR DUNE/DUNE.hpp PATHS $HOME/dune/build/_CPack_Packages/Linux/TBZ2/dune-2017.01.0-x86-64bit-linux-glibc-gcc54/include)
-  find_library(DUNE_LIBRARY NAMES dune-core PATHS $HOME/dune/build/_CPack_Packages/Linux/TBZ2/dune-2017.01.0-x86-64bit-linux-glibc-gcc54/lib)
+  find_path(DUNE_INCLUDE_DIR DUNE/DUNE.hpp HINTS ${path}/include)
+  find_library(DUNE_LIBRARY NAMES dune-core HINTS ${path}/lib)
 endforeach()
 
 include(FindPackageHandleStandardArgs)
